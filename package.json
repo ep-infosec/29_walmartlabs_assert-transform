@@ -1,0 +1,46 @@
+{
+  "name": "assert-transform",
+  "version": "1.0.0",
+  "description": "Return a promise asserting that `babelTransform(actual) === expected`",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "author": "Eric Baer <me@ericbaer.com>",
+  "homepage": "https://github.com/walmartreact/assert-transform",
+  "bugs": {
+    "url": "https://github.com/walmartreact/assert-transform/issues"
+  },
+  "repository": "git://github.com/walmartreact/assert-transform.git",
+  "private": false,
+  "dependencies": {
+    "babel-core": "^6.3.17",
+    "babel-runtime": "^6.2.0",
+    "bluebird": "^3.0.6",
+    "colors": "^1.1.2",
+    "diff": "^2.2.1",
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.1.18",
+    "babel-eslint": "5.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "core-error-predicates": "^1.1.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint": "^1.10.3",
+    "rimraf": "^2.4.3"
+  },
+  "scripts": {
+    "build": "babel src/ --out-dir lib/",
+    "check": "npm run clean && npm run build && npm run lint",
+    "clean": "rimraf lib/",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "babel-plugin",
+    "test",
+    "assertion",
+    "assert",
+    "testing"
+  ]
+}
